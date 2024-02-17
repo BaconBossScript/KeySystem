@@ -105,16 +105,6 @@ function Library:CreateWindow(args: WindowArgs)
 		Size = UDim2.new(1, 0, 0.15, 0),
 	})
 
-    -- Tạo ImageLabel
-    local imageLabel = self:new("ImageLabel", {
-        Parent = Content,
-        Size = UDim2.new(0, 100, 0, 100),
-        Position = UDim2.new(0.5, -50, 0.5, -200),
-        BackgroundTransparency = 1,
-        Image = "http://www.roblox.com/asset/?id=15942720122"
-    })
-
-
 	self:new("TextLabel", {
 		Parent = Top,
 		Text = args and args.title or "Base",
@@ -229,7 +219,7 @@ function Library:CreateWindow(args: WindowArgs)
 		BackgroundColor3 = Color3.fromRGB(114, 137, 218),
 		Position = UDim2.new(0.5, 0, 0.5, 0),
 		Size = UDim2.new(0.95, 0, 0.75, 0),
-		Text = args and "discord.gg/" .. args.serverCode or "discord.gg",
+		Text = args and args.serverCode,
 		TextSize = 14,
 	})
 
