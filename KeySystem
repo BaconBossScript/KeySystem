@@ -115,6 +115,24 @@ function Library:CreateWindow(args: WindowArgs)
 		TextSize = 18,
 	})
 
+    -- Add Close Button
+    local CloseButton = self:new("TextButton", {
+        self:new("UICorner", {
+            CornerRadius = UDim.new(1, 0)
+        }),
+        Parent = Top,
+        Text = "X",
+        BackgroundColor3 = Color3.fromRGB(255, 100, 100),
+        Position = UDim2.new(1, -20, 0, 0),
+        Size = UDim2.new(0, 20, 0, 20),
+        TextColor3 = Color3.new(1, 1, 1),
+        TextSize = 14
+    })
+
+    CloseButton.MouseButton1Click:Connect(function()
+        ScreenGui:Destroy()
+    end)
+
 	local Content = self:new("Frame", {
 		Parent = Frame,
 		AnchorPoint = Vector2.new(0, 1),
