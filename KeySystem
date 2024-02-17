@@ -8,8 +8,8 @@ local HttpService = game:GetService("HttpService")
 local Library = {
 	Colors = {
 		Background = {
-			base = Color3.fromRGB(30, 30, 30),
-			main = Color3.fromRGB(35, 35, 35),
+			base = Color3.fromRGB(255, 166, 158),
+			main = Color3.fromRGB(255, 212, 181),
 		}
 	}
 }
